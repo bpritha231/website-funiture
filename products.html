@@ -1,0 +1,437 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Products</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<!-- Navbar -->
+<div class="navbar" id="navbar">
+  <div style="font-size:22px;font-weight:700; display: flex; align-items: center;">
+    <img src="./images/logo.png" alt="Logo" style="width:70px; height:70px; margin-right:10px;">
+    VIYAAN FURNITURES
+  </div>
+  <div style="margin-right: 90px;">
+    <a href="home.html">Home</a>
+    <a href="products.html"  class="active1">Products</a>
+    <a href="about.html">About</a>
+    <a href="contact.html">Contact</a>
+    <a href="order.html" >Order list</a>
+
+    <a href="#cart" style="background:black;color:white;padding:6px 12px;border-radius:5px;">
+      Cart (<span id="cart-count">0</span>)
+    </a>
+
+    <a href="#buyNowSection" style="background:rgb(25, 221, 7);color:rgb(255, 255, 255);padding:6px 12px;border-radius:5px;">buy now</a>
+  </div>
+</div>
+
+
+<div class="container">
+  <h2>Our Products</h2>
+  <p class="subtitle">Explore our handcrafted furniture collection.</p>
+  <div class="search"></div>
+  <div class="filters">
+    <button class="active" onclick="filterProducts('all')">All</button>
+    <button onclick="filterProducts('living')">Living Room</button>
+    <button onclick="filterProducts('bedroom')">Bedroom</button>
+    <button onclick="filterProducts('dining')">Dining Room</button>
+    <button onclick="filterProducts('dressing table')">Dressing Table</button>
+  </div>
+
+  <div class="grid" id="productGrid">
+    <div class="card" data-category="living">
+      <img src="./images/sofa.jpg" alt="sofa" onclick="showImage(this)">
+      <div class="card-content">
+        <h3>Comfort Sofa</h3>
+        <p>Perfect for your living room.</p>
+        <div class="price">₹2899</div>
+        <button class="btn" onclick="buyNow('Comfort Sofa','₹2899','./images/sofa.jpg')">Buy Now</button>
+        <button class="btn" onclick="addToCart('Comfort Sofa','₹2899','./images/sofa.jpg')">Add to Cart</button>
+      </div>
+    </div>
+    <!-- sofa2 -->
+    <div class="card" data-category="living">
+      <img src="./images/sofa2.jpg"  alt="sofa2" onclick="showImage(this)">
+      <div class="card-content">
+        <h3>Scandinavian Minimal Sofa</h3>
+        <p>Simple and stylish design, light-colored fabric, fits small and large spaces..</p>
+        <div class="price">₹2999</div>
+        <button class="btn" onclick="buyNow('Scandinavian Minimal Sofa','₹2999','./images/sofa2.jpg')">Buy Now</button>
+        <button class="btn" onclick="addToCart('Scandinavian Minimal Sofa','₹2999','./images/sofa2.jpg')">Add to Cart</button>
+      </div>
+    </div>
+    <!-- sofa4 -->
+    <div class="card" data-category="living">
+      <img src="./images/sofa4.jpg" alt="sofa2" onclick="showImage(this)">
+      <div class="card-content">
+        <h3>Elegant Velvet Sofa</h3>
+        <p>Luxurious velvet fabric sofa with deep cushions for ultimate comfort..</p>
+        <div class="price">₹1869</div>
+        <button class="btn" onclick="buyNow('Elegant Velvet Sofa','₹1869','./images/sofa4.jpg')">Buy Now</button>
+        <button class="btn" onclick="addToCart('Elegant Velvet Sofa','₹1869','./images/sofa4.jpg')">Add to Cart</button>
+      </div>
+    </div>
+    <!-- sofa3 -->
+    <div class="card" data-category="living">
+      <img src="./images/sofa3.jpg" alt="sofa2" onclick="showImage(this)">
+      <div class="card-content">
+        <h3>Classic Leather Sofa</h3>
+        <p>Premium leather finish with sturdy wooden frame for long-lasting use..</p>
+        <div class="price">₹1599</div>
+        <button class="btn" onclick="buyNow('Classic Leather Sofa','₹1599','./images/sofa3.jpg')">Buy Now</button>
+        <button class="btn" onclick="addToCart('Classic Leather Sofa','₹1599','./images/sofa3.jpg')">Add to Cart</button>
+      </div>
+    </div>
+    <!-- bedroom -->
+    <div class="card" data-category="bedroom">
+      <img src="./images/bedrrom1.jpg" alt="bed" onclick="showImage(this)">
+      <div class="card-content">
+        <h3>King Bed</h3>
+        <p>A luxurious wooden bed frame with elegant headboard, perfect for a spacious bedroom..</p>
+        <div class="price">₹1599</div>
+        <button class="btn" onclick="buyNow('King Bed','₹1599','./images/bedrrom1.jpg')">Buy Now</button>
+        <button class="btn" onclick="addToCart('King Bed','₹1599','./images/bedrrom1.jpg')">Add to Cart</button>
+      </div>
+    </div>
+    <!-- br2 -->
+    <div class="card" data-category="bedroom">
+      <img src="./images/bedrrom2.jpg" alt="Dreamy Nightstand" onclick="showImage(this)">
+      <div class="card-content">
+        <h3>Dreamy Nightstand</h3>
+        <p>Compact nightstand with drawer storage, ideal for keeping essentials beside your bed..</p>
+        <div class="price">₹2099</div>
+        <button class="btn" onclick="buyNow('Dreamy Nightstand','₹2099','./images/bedrrom2.jpg')">Buy Now</button>
+        <button class="btn" onclick="addToCart('Dreamy Nightstand','₹2099','./images/bedrrom2.jpg')">Add to Cart</button>
+      </div>
+    </div>
+    <!-- br3 -->
+    <div class="card" data-category="bedroom">
+      <img src="./images/bedrrom3.jpg" alt="bed3" onclick="showImage(this)">
+      <div class="card-content">
+        <h3>Elegant Wardrobe Bed</h3>
+        <p>Sleek 2-door wardrobe with hanging space and shelves, perfect for modern bedrooms..</p>
+        <div class="price">₹3989</div>
+        <button class="btn" onclick="buyNow('Elegant Wardrobe Bed','₹3989','./images/bedrrom3.jpg')">Buy Now</button>
+        <button class="btn" onclick="addToCart('Elegant Wardrobe Bed','₹3989','./images/bedrrom3.jpg')">Add to Cart</button>
+      </div>
+    </div>
+    <!-- br4 -->
+    <div class="card" data-category="bedroom">
+      <img src="./images/bedrrom4.jpg" alt="bedrrom4" onclick="showImage(this)">
+      <div class="card-content">
+        <h3>Cozy Dresser</h3>
+        <p>Spacious dresser with multiple drawers, designed to organize clothes and accessories neatly.</p>
+        <div class="price">₹3999</div>
+        <button class="btn" onclick="buyNow('Cozy Dresser','₹3999','./images/bedrrom4.jpg')">Buy Now</button>
+        <button class="btn" onclick="addToCart('Cozy Dresser','₹3999','./images/bedrrom4.jpg')">Add to Cart</button>
+      </div>
+    </div>
+    <!-- dining -->
+    <div class="card" data-category="dining">
+      <img src="./images/dining1.jpg" alt="dining" onclick="showImage(this)">
+      <div class="card-content">
+        <h3> Elegant Oak Dining Table Set</h3>
+        <p>A handcrafted oak table that adds warmth and sophistication to your dining area..</p>
+        <div class="price">₹4299</div>
+        <button class="btn" onclick="buyNow('Elegant Oak Dining Table Set','₹4299','./images/dining1.jpg')">Buy Now</button>
+        <button class="btn" onclick="addToCart('Elegant Oak Dining Table Set','₹4299','./images/dining1.jpg')">Add to Cart</button>
+      </div>
+    </div>
+    <!-- dining2 -->
+    <div class="card" data-category="dining">
+      <img src="./images/dining2.jpg" alt="dining" onclick="showImage(this)">
+      <div class="card-content">
+        <h3> Modern Glass Dining Table</h3>
+        <p>Sleek tempered glass top with a sturdy metal frame for a contemporary look...</p>
+        <div class="price">₹4209</div>
+        <button class="btn" onclick="buyNow('Modern Glass Dining Table','₹4209','./images/dining2.jpg')">Buy Now</button>
+        <button class="btn" onclick="addToCart('Modern Glass Dining Table','₹4209','./images/dining2.jpg')">Add to Cart</button>
+      </div>
+    </div>
+    <!-- dining3 -->
+    <div class="card" data-category="dining">
+      <img src="./images/dining3.jpg" alt="dining" onclick="showImage(this)">
+      <div class="card-content">
+        <h3>Rustic Farmhouse Table</h3>
+        <p>Perfect for family meals, made with solid wood and a rustic finish....</p>
+        <div class="price">₹7209</div>
+        <button class="btn" onclick="buyNow('Rustic Farmhouse Table','₹7209','./images/dining3.jpg')">Buy Now</button>
+        <button class="btn" onclick="addToCart('Rustic Farmhouse Table','₹7209','./images/dining3.jpg')">Add to Cart</button>
+      </div>
+    </div>
+    <!-- dining4 -->
+    <div class="card" data-category="dining">
+      <img src="./images/dining4.jpg" alt="dining" onclick="showImage(this)">
+      <div class="card-content">
+        <h3>Expandable Dining Table</h3>
+        <p>Space-saving table that easily extends to accommodate extra guests...</p>
+        <div class="price">₹9209</div>
+        <button class="btn" onclick="buyNow('Expandable Dining Table','₹9209','./images/dining4.jpg')">Buy Now</button>
+        <button class="btn" onclick="addToCart('Expandable Dining Table','₹9209','./images/dining4.jpg')">Add to Cart</button>
+      </div>
+    </div>
+    <!-- dressing table -->
+    <div class="card" data-category="dressing table">
+      <img src="./images/dressing1.jpg" alt="dressing table" onclick="showImage(this)">
+      <div class="card-content">
+        <h3>Elegance Vanity</h3>
+        <p>Sleek wooden dressing table with a large mirror and storage drawers for cosmetics and accessories..</p>
+        <div class="price">₹6209</div>
+        <button class="btn" onclick="buyNow('Elegance Vanity','₹6299','./images/dressing1.jpg')">Buy Now</button>
+        <button class="btn" onclick="addToCart('Elegance Vanity','₹6209','./images/dressing1.jpg')">Add to Cart</button>
+      </div>
+    </div>
+    <!-- dressing table -->
+    <div class="card" data-category="dressing table">
+      <img src="./images/dressing2.jpg" alt="dressing table" onclick="showImage(this)">
+      <div class="card-content">
+        <h3>Chic Mirror Console  </h3>
+        <p>Modern dressing table featuring a minimalist design, perfect for small bedrooms..</p>
+        <div class="price">₹5000</div>
+        <button class="btn" onclick="buyNow('Chic Mirror Console  ','₹5000','./images/dressing2.jpg')">Buy Now</button>
+        <button class="btn" onclick="addToCart('Chic Mirror Console  ','₹5000','./images/dressing2.jpg')">Add to Cart</button>
+      </div>
+    </div>
+    <!-- dressing table3 -->
+    <div class="card" data-category="dressing table">
+      <img src="./images/dressing3.jpg" alt="dressing table" onclick="showImage(this)">
+      <div class="card-content">
+        <h3>Classic Makeup Station</h3>
+        <p>Traditional wooden dressing table with carved details and ample storage space....</p>
+        <div class="price">₹4200</div>
+        <button class="btn" onclick="buyNow('Classic Makeup Station','₹4200','./images/dressing3.jpg')">Buy Now</button>
+        <button class="btn" onclick="addToCart('Classic Makeup Station','₹4200','./images/dressing3.jpg')">Add to Cart</button>
+      </div>
+    </div>
+    <!-- dressing table4 -->
+    <div class="card" data-category="dressing table">
+      <img src="./images/dressing4.jpg" alt="dressing table" onclick="showImage(this)">
+      <div class="card-content">
+        <h3>Glamour Dressing Desk</h3>
+        <p>Stylish tabletop with LED mirror lights and compartments for daily essentials..</p>
+        <div class="price">₹4799</div>
+        <button class="btn" onclick="buyNow('Glamour Dressing Desk','₹4799','./images/dressing4.jpg')">Buy Now</button>
+        <button class="btn" onclick="addToCart('Glamour Dressing Desk','₹4799','./images/dressing4.jpg')">Add to Cart</button>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- Cart Section -->
+<div id="cart">
+  <h2>Your Cart</h2>
+  <ul id="cart-items"></ul>
+  <div class="total" id="cart-total">Total: ₹0</div>
+</div>
+
+<!-- Buy Now Section -->
+<div id="buyNowSection">
+  <h2>Buy Now</h2>
+  <ul id="buyNow-items"></ul>
+  <div class="total" id="buyNow-total">Total: ₹0</div>
+
+  <h3 style="margin-top:20px;">Enter Delivery Details</h3>
+  <div class="checkout-form" style="display:flex; flex-direction:column; gap:10px; max-width:400px;">
+    <input class="address-input" type="text" placeholder="Full Name" id="buyNow-name">
+    <input class="address-input" type="tel" placeholder="Phone Number" id="buyNow-phone">
+    <input class="address-input" type="text" placeholder="City" id="buyNow-city">
+    <input class="address-input" type="text" placeholder="Country" id="buyNow-country">
+    <textarea class="address-input" placeholder="Enter Full Address" id="buyNow-address"></textarea>
+
+    <select id="buyNow-payment" class="address-input">
+      <option value="">Select Payment Type</option>
+      <option value="Cash on Delivery">Cash on Delivery</option>
+      <option value="UPI / Online">UPI / Online Payment</option>
+      <option value="Card Payment">Card Payment</option>
+    </select>
+
+    <button class="btn confirm-btn" onclick="confirmOrder()">Confirm Order</button>
+  </div>
+</div>
+
+<!-- Image Modal -->
+<div id="imgModal" style="display:none; position:fixed; z-index:2000; left:0; top:0; width:100%; height:100%; background:rgba(0,0,0,0.8); justify-content:center; align-items:center;">
+  <span id="closeModal" style="position:absolute; top:20px; right:40px; font-size:40px; color:white; cursor:pointer;">&times;</span>
+  <img id="modalImg" src="" style="max-width:90%; max-height:90%; border-radius:10px;">
+</div>
+
+<script>
+let cart = [];
+let buyNowList = [];
+
+function filterProducts(category){
+  const cards = document.querySelectorAll('.card');
+  document.querySelectorAll('.filters button').forEach(btn=>btn.classList.remove('active'));
+  // event may be undefined when called from inline onclick, guard:
+  if(typeof event !== 'undefined' && event.target) event.target.classList.add('active');
+  cards.forEach(card=>{
+    card.style.display = (category==='all' || card.dataset.category===category)?'flex':'none';
+  });
+}
+
+function addToCart(name, price, img){
+  cart.push({name, price, img, qty:1});
+  updateCart();
+}
+
+function buyNow(name, price, img){
+  buyNowList.push({name, price, img, qty:1});
+  updateBuyNow();
+  location.href="#buyNowSection";
+}
+
+function updateCart(){
+  const cartItems=document.getElementById("cart-items");
+  cartItems.innerHTML="";
+  let total=0;
+  cart.forEach((item,index)=>{
+    total+=parseInt(item.price.replace('₹',''))*item.qty;
+    let li=document.createElement("li");
+    li.innerHTML=`<img src="${item.img}">${item.name} - ₹${item.price.replace('₹','')}
+Qty: <input type="number" min="1" value="${item.qty}" class="qty-input" onchange="updateQty('cart',${index},this.value)">
+<button onclick="removeCart(${index})">Remove</button>`;
+    cartItems.appendChild(li);
+  });
+  document.getElementById("cart-count").innerText=cart.length;
+  document.getElementById("cart-total").innerText=`Total: ₹${total}`;
+}
+
+function removeCart(index){
+  cart.splice(index,1);
+  updateCart();
+}
+
+function updateBuyNow(){
+  const buyItems=document.getElementById("buyNow-items");
+  buyItems.innerHTML="";
+  let total=0;
+  buyNowList.forEach((item,index)=>{
+    total+=parseInt(item.price.replace('₹',''))*item.qty;
+    let li=document.createElement("li");
+    li.innerHTML=`<img src="${item.img}">${item.name} - ₹${item.price.replace('₹','')}
+Qty: <input type="number" min="1" value="${item.qty}" class="qty-input" onchange="updateQty('buyNow',${index},this.value)">
+<button onclick="removeBuyNow(${index})">Remove</button>`;
+    buyItems.appendChild(li);
+  });
+  document.getElementById("buyNow-total").innerText=`Total: ₹${total}`;
+}
+
+function removeBuyNow(index){
+  buyNowList.splice(index,1);
+  updateBuyNow();
+}
+
+function updateQty(section,index,value){
+  value = parseInt(value);
+  if(value<1) value=1;
+  if(section==='cart'){
+    cart[index].qty=value;
+    updateCart();
+  } else if(section==='buyNow'){
+    buyNowList[index].qty=value;
+    updateBuyNow();
+  }
+}
+
+function confirmOrder(){
+  const name = document.getElementById("buyNow-name").value.trim();
+  const phone = document.getElementById("buyNow-phone").value.trim();
+  const city = document.getElementById("buyNow-city").value.trim();
+  const country = document.getElementById("buyNow-country").value.trim();
+  const address = document.getElementById("buyNow-address").value.trim();
+  const payment = document.getElementById("buyNow-payment").value;
+
+  if(!name || !phone || !city || !country || !address || !payment){
+    alert("⚠️ Please fill in all the fields!");
+    return;
+  }
+
+  if(buyNowList.length === 0){
+    alert("No product to buy!");
+    return;
+  }
+
+  const orderDate = new Date();
+  const deliveryDate = new Date();
+  deliveryDate.setDate(orderDate.getDate() + 5);
+
+  const total = buyNowList.reduce((sum,item) => sum + parseInt(item.price.replace('₹',''))*item.qty,0);
+
+  // Save customer info along with order
+  let existingOrders = JSON.parse(localStorage.getItem("orders")) || [];
+  existingOrders.push({
+    customer: {name, phone, city, country, address, payment},
+    items: buyNowList,
+    total: total,
+    orderDate: orderDate.toLocaleString(),
+    deliveryDate: deliveryDate.toLocaleDateString()
+  });
+  localStorage.setItem("orders", JSON.stringify(existingOrders));
+
+  alert("✅ Order Confirmed! Saved to Order List.");
+
+  // Clear Buy Now list and form
+  buyNowList = [];
+  updateBuyNow();
+  document.getElementById("buyNow-name").value = "";
+  document.getElementById("buyNow-phone").value = "";
+  document.getElementById("buyNow-city").value = "";
+  document.getElementById("buyNow-country").value = "";
+  document.getElementById("buyNow-address").value = "";
+  document.getElementById("buyNow-payment").value = "";
+  // Optionally go to orders page:
+  // window.location.href = 'order.html';
+}
+
+// Show full image in modal
+function showImage(img){
+  const modal = document.getElementById('imgModal');
+  const modalImg = document.getElementById('modalImg');
+  modal.style.display = 'flex';
+  modalImg.src = img.src;
+}
+
+// Close modal
+document.getElementById('closeModal').onclick = function(){
+  document.getElementById('imgModal').style.display = 'none';
+}
+
+// Also close modal if user clicks outside the image
+document.getElementById('imgModal').onclick = function(e){
+  if(e.target.id === 'imgModal'){
+    this.style.display = 'none';
+  }
+}
+</script>
+
+<!-- Footer Section -->
+<footer style="background:#8B4513; color:white; padding:80px 50px; font-size:16px;">
+  <div style="display:flex; justify-content:space-between; flex-wrap:wrap; gap:50px;">
+    <div>
+      <h3>Artisan Home</h3>
+      <p>Creating beautiful, sustainable furniture that brings families together. Each piece is thoughtfully designed and expertly crafted to last generations.</p>
+      <p>123 Craftsman Avenue, San Francisco, CA 94103<br>
+      (555) 123-4567<br>
+      hello@artisanhome.com</p>
+    </div>
+
+    <div>
+      <h4>Quick Links</h4>
+      <ul style="list-style:none; padding:0;">
+        <li><a href="products.html" style="color: #ccc;">Products</a></li>
+        <li><a href="about.html" style="color: #ccc;">About</a></li>
+        <li><a href="contact.html" style="color: #ccc;">Contact</a></li>
+      </ul>
+    </div>
+  </div>
+
+  <hr style="border-color:rgba(255,255,255,0.3); margin:40px 0;">
+  <p style="text-align:center;">© 2025 Artisan Home. All rights reserved. | Privacy Policy | Terms of Service</p>
+</footer>
+
+</body>
+</html>

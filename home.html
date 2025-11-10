@@ -1,0 +1,247 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Home</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+  </head>
+
+  <body>
+
+    <!-- Navbar -->
+    <div class="navbar" id="navbar">
+      <!-- Logo + Brand -->
+      <div style="font-size:22px;font-weight:700; display: flex; align-items: center;">
+        <img src="./images/logo.png" alt="Logo" style="width:70px; height:70px; margin-right:10px;">
+        VIYAAN FURNITURES
+      </div>
+
+      <!-- Navbar Links -->
+      <div class="navbar1" style="margin-right: 90px;">
+        <a href="home.html" class="active1">Home</a>
+        <a href="products.html">Products</a>
+        <a href="about.html">About</a>
+        <a href="contact.html">Contact</a>
+        <a href="order.html" >Order
+          list</a>
+
+        <a href="#cart" style="background:black;color:white;padding:6px 12px;border-radius:5px;">Cart</a>
+        <a href="#cart"
+          style="background:rgb(25, 221, 7);color:rgb(255, 255, 255);padding:6px 12px;border-radius:5px;">buy now</a>
+      </div>
+    </div>
+
+
+    <!-- Hero Section -->
+    <div id="home" style="position:relative;width:100%;height:100vh;overflow:hidden;padding-top:80px;">
+      <!-- Background Image -->
+      <img src="https://images.unsplash.com/photo-1505691938895-1758d7feb511?w=1600" alt="Furniture"
+        style="width:100%;height:100%;object-fit:cover;">
+
+      <!-- Overlay -->
+      <div style="position:absolute;top:0;left:0;width:100%;height:100%;background:rgba(0,0,0,0.4);"></div>
+
+      <!-- Text Content -->
+      <div
+        style="position:absolute;top:50%;left:50%;transform:translate(-50%,-50%);text-align:center;color:white;padding:20px;max-width:800px;">
+        <h1 style="font-size:48px;font-weight:700;margin-bottom:15px;">Crafted for<br>Your Life</h1>
+        <p style="font-size:18px;line-height:1.6;margin-bottom:25px;">
+          Discover handcrafted furniture that blends timeless elegance with modern sophistication.
+          Transform your space with pieces designed to last a lifetime.
+        </p>
+        <div style="display:flex;gap:20px;justify-content:center;">
+          <a href="#collection"
+            style="background:wheat;color:black;padding:12px 25px;border-radius:8px;text-decoration:none;font-weight:600;">Explore
+            Collection</a>
+          <a href="#story"
+            style="background:transparent;border:2px solid white;color:white;padding:12px 25px;border-radius:8px;text-decoration:none;font-weight:600;">Our
+            Story</a>
+        </div>
+      </div>
+    </div>
+
+    <!-- Collection Section -->
+    <div id="collection" style="height:100vh;padding:120px 50px;background:#f5f5f5;">
+      <h2 style="font-size:52px;margin-bottom:20px; ">Our Collection</h2>
+      <p>Here you can showcase your furniture collection with beautiful product images and details...</p>
+
+      <div class="products-container">
+        <div class="product-card">
+          <img src="./images/collecctionimg1.jpg" style="height:300px;width:350px;border-radius:10px;object-fit:cover;">
+          <div class="wishlist-icon" onclick="toggleWishlist(this, 'Outdoor Garden Dining Set')">♡</div>
+          <div class="product-details">
+            <h3>Comfort Living Sofa</h3>
+            <p>Premium fabric sofa with hardwood frame construction</p>
+            <div class="price">Rs. 11,9,990</div>
+            <a href="https://www.amazon.in" target="_blank" class="buy-btn">Buy Now</a>
+          </div>
+        </div>
+
+        <div class="product-card">
+          <img src="./images/collecctionimg2.jpg" style="height:300px;width:350px;border-radius:10px;object-fit:cover;">
+          <div class="wishlist-icon" onclick="toggleWishlist(this, 'Outdoor Garden Dining Set')">♡</div>
+          <div class="product-details">
+            <h3>Dressing table set</h3>
+            <p>wonderful set of Dressing table</p>
+            <div class="price">Rs. 1,29,90</div>
+            <a href="https://www.amazon.in" target="_blank" class="buy-btn">Buy Now</a>
+          </div>
+        </div>
+
+        <div class="product-card">
+          <img src="./images/collecctionimg3.jpg" style="height:300px;width:350px;border-radius:10px;object-fit:cover;">
+          <div class="wishlist-icon" onclick="toggleWishlist(this, 'Outdoor Garden Dining Set')">♡</div>
+          <div class="product-details">
+            <h3>Serenity Bedroom Collection</h3>
+            <p>Complete bedroom set with platform bed and nightstands</p>
+            <div class="price">Rs. 2,19,900</div>
+            <a href="https://www.amazon.in" target="_blank" class="buy-btn">Buy Now</a>
+          </div>
+        </div>
+      </div>
+      <!-- what our clinet say -->
+      <!-- Clients Section -->
+      <div id="clients" style="background:#f3f2f1; color:rgb(121, 3, 3); padding:80px 50px; text-align:center;">
+        <h2 style="font-size:42px; margin-bottom:20px;">What Our Clients Say</h2>
+        <p style="font-size:18px; margin-bottom:50px;">
+          Hear from families who have transformed their homes with our handcrafted furniture.
+        </p>
+
+        <div class="client-cards">
+          <div class="client-card">
+            <img src="./images/rating stars.png" style="height: 20px; width: 20px; ">
+            <img src="./images/rating stars.png" style="height: 20px; width: 20px; ">
+            <img src="./images/rating stars.png" style="height: 20px; width: 20px; ">
+            <img src="./images/rating stars.png" style="height: 20px; width: 20px; ">
+            <img src="./images/rating stars.png" style="height: 20px; width: 20px; ">
+
+            <p>"The quality and craftsmanship of our dining set exceeded all expectations. Every piece tells a story of
+              dedication and artistry."</p>
+            <h4>Sarah Johnson</h4>
+            <span>San Francisco, CA</span>
+          </div>
+
+          <div class="client-card">
+            <img src="./images/rating stars.png" style="height: 20px; width: 20px; ">
+            <img src="./images/rating stars.png" style="height: 20px; width: 20px; ">
+            <img src="./images/rating stars.png" style="height: 20px; width: 20px; ">
+            <img src="./images/rating stars.png" style="height: 20px; width: 20px; ">
+            <img src="./images/rating stars.png" style="height: 20px; width: 20px; ">
+
+            <p>"From consultation to delivery, the entire experience was flawless. Our bedroom collection has
+              transformed our space into a peaceful retreat."</p>
+            <h4>Michael Chen</h4>
+            <span>New York, NY</span>
+          </div>
+
+          <div class="client-card">
+            <img src="./images/rating stars.png" style="height: 20px; width: 20px; ">
+            <img src="./images/rating stars.png" style="height: 20px; width: 20px; ">
+            <img src="./images/rating stars.png" style="height: 20px; width: 20px; ">
+            <img src="./images/rating stars.png" style="height: 20px; width: 20px; ">
+            <img src="./images/rating stars.png" style="height: 20px; width: 20px; ">
+
+            <p>"The attention to detail and sustainable materials make Artisan Home stand out. We're proud to have these
+              pieces in our home."</p>
+            <h4>Emily Rodriguez</h4>
+            <span>Austin, TX</span>
+          </div>
+        </div>
+      </div>
+      <!-- footer -->
+      <!-- Footer Section -->
+      <footer style="background:#8B4513; color:white; padding:80px 50px; font-size:16px;">
+        <div style="display:flex; justify-content:space-between; flex-wrap:wrap; gap:50px;">
+
+          <div>
+            <h3>Artisan Home</h3>
+            <p>Creating beautiful, sustainable furniture that brings families together. Each piece is thoughtfully
+              designed and expertly crafted to last generations.</p>
+            <p>123 Craftsman Avenue, San Francisco, CA 94103<br>
+              (555) 123-4567<br>
+              hello@artisanhome.com</p>
+          </div>
+
+          <div>
+            <h4>Quick Links</h4>
+            <ul style="list-style:none; padding:0;">
+              <a href="#products" style="color: #ccc;">Products</a><br>
+              <a href="#about" style="color: #ccc;"></a>About</a><br>
+              <a href="#contact" style="color: #ccc;"></a>Contact</a>
+
+          </div>
+
+          <hr style="border-color:rgba(255,255,255,0.3); margin:40px 0;">
+
+          <p style="text-align:center;">© 2025 Artisan Home. All rights reserved. | Privacy Policy | Terms of Service
+          </p>
+      </footer>
+
+
+
+
+  </body>
+
+</html>
+
+
+<script>
+  // check login
+  if (sessionStorage.getItem("loggedIn") !== "true") {
+    window.location.href = "index.html";
+  }
+
+  // show popup only once after login
+  if (sessionStorage.getItem("showLoginPopup") === "true") {
+    alert("Login Successfully ✅");
+    sessionStorage.removeItem("showLoginPopup");
+  }
+  // navbar scroll
+
+  // Change navbar bg on scroll
+  window.addEventListener("scroll", function () {
+    var navbar = document.getElementById("navbar");
+    if (window.scrollY > 50) {
+      navbar.classList.add("scrolled");
+    } else {
+      navbar.classList.remove("scrolled");
+    }
+  });
+  let wishlist = [];
+
+  function toggleWishlist(icon, productName) {
+    if (wishlist.includes(productName)) {
+      // remove
+      wishlist = wishlist.filter(item => item !== productName);
+      icon.classList.remove("active");
+    } else {
+      // add
+      wishlist.push(productName);
+      icon.classList.add("active");
+    }
+    updateWishlistUI();
+  }
+
+  function updateWishlistUI() {
+    // navbar count
+    document.getElementById("wishlist-link").textContent = `Wishlist (${wishlist.length})`;
+
+    // wishlist page items
+    const list = document.getElementById("wishlist-items");
+    list.innerHTML = "";
+    wishlist.forEach(item => {
+      const li = document.createElement("li");
+      li.textContent = "❤️ " + item;
+      list.appendChild(li);
+    });
+  }
+</script>
+</body>
+
+</html>

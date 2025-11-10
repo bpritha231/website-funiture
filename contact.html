@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Contact Us</title>
+  <link rel="stylesheet" href="style.css">
+
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+
+
+</head>
+
+<body>
+
+  <!-- Navbar -->
+  <div class="navbar" id="navbar">
+    <div style="font-size:22px;font-weight:700; display: flex; align-items: center;">
+      <img src="./images/logo.png" alt="Logo" style="width:70px; height:70px; margin-right:10px;">
+      VIYAAN FURNITURES
+    </div>
+    <div style="margin-right: 90px;">
+      <a href="home.html">Home</a>
+      <a href="products.html">Products</a>
+      <a href="about.html">About</a>
+      <a href="contact.html" class="active1">Contact</a>
+      <a href="order.html" >Order list</a>
+
+      <a href="#cart" style="background:black;color:white;padding:6px 12px;border-radius:5px;">Cart</a>
+      <a href="#cart"
+        style="background:rgb(25, 221, 7);color:rgb(255, 255, 255);padding:6px 12px;border-radius:5px;">buy now</a>
+    </div>
+  </div>
+
+
+  <!-- Contact Section -->
+  <section class="contact-section">
+    <!-- Contact Info -->
+    <div class="contact-info" style="height: 300px; width: 300px;box-shadow: 0 0 15px #8387dd;">
+      <h2>Contact Information</h2>
+      <p><span class="icon">📍</span>123 Craftsman Avenue, thanjavur,</p>
+      <p><span class="icon">📞</span>+91 9876543210</p>
+      <p><span class="icon">✉️</span>viyaanfurniture21@gmail.com</p>
+      <div class="social-icons">
+        <a href="#"><i class="fa-brands fa-facebook"></i></a>
+        <a href="#"><i class="fa-brands fa-instagram"></i></a>
+        <a href="#"><i class="fa-brands fa-linkedin"></i></a>
+        <a href="#"><i class="fa-brands fa-twitter"></i></a>
+      </div>
+    </div>
+
+    <!-- Contact Form -->
+    <!-- <div class="contact-form" style="box-shadow:  0 0 15px #8387dd;">
+      <h2>Get in Touch</h2>
+      <form onsubmit="submitForm(event)">
+        <input type="text" id="name" placeholder="Your Name" required>
+        <input type="email" id="email" placeholder="Your Email" required>
+        <input type="text" id="subject" placeholder="Subject" required>
+        <textarea id="message" rows="6" placeholder="Your Message" required></textarea>
+        <button type="submit">Send Message</button>
+      </form>
+    </div> -->
+  </section>
+
+  <script>
+    function submitForm(event) {
+      event.preventDefault();
+      const name = document.getElementById('name').value;
+      const email = document.getElementById('email').value;
+      const subject = document.getElementById('subject').value;
+      const message = document.getElementById('message').value;
+
+      alert(`Thank you, ${name}! Your message has been sent.\n\nSubject: ${subject}\nMessage: ${message}`);
+
+      // Reset form
+      event.target.reset();
+    }
+  </script>
+  <!-- Footer Section -->
+  <footer style="background:#8B4513; color:white; padding:80px 50px; font-size:16px;">
+    <div style="display:flex; justify-content:space-between; flex-wrap:wrap; gap:50px;">
+
+      <div>
+        <h3>Artisan Home</h3>
+        <p>Creating beautiful, sustainable furniture that brings families together. Each piece is thoughtfully designed
+          and expertly crafted to last generations.</p>
+        <p>123 Craftsman Avenue, San Francisco, CA 94103<br>
+          (555) 123-4567<br>
+          hello@artisanhome.com</p>
+      </div>
+
+      <div>
+        <h4>Quick Links</h4>
+        <ul style="list-style:none; padding:0;">
+          <a href="#products" style="color: #ccc;">Products</a><br>
+          <a href="#about" style="color: #ccc;"></a>About</a><br>
+          <a href="#contact" style="color: #ccc;"></a>Contact</a>
+
+      </div>
+
+      <hr style="border-color:rgba(255,255,255,0.3); margin:40px 0;">
+
+      <p style="text-align:center;">© 2025 Artisan Home. All rights reserved. | Privacy Policy | Terms of Service</p>
+  </footer>
+
+
+</body>
+
+</html>

@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Login Page</title>
+  <link rel="stylesheet" href="style.css">
+  <!-- Font Awesome CDN -->
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+
+</head>
+<body style="margin:0;display:flex;justify-content:center;align-items:center;height:100vh;background:#d6c9bb;font-family:Poppins, sans-serif;">
+
+  <div style="display:flex;width:850px;height:500px;background:#fff;border-radius:20px;overflow:hidden;box-shadow:0px 10px 25px rgba(0,0,0,0.1);">
+    
+    <!-- Left Side (Form) -->
+    <div style="flex:1;padding:40px;display:flex;flex-direction:column;justify-content:center;">
+      <h2 style="margin-bottom:10px;font-size:24px;font-weight:600;">Welcome</h2>
+      <p style="font-size:14px;color:#444;">Let’s create your new account</p>
+
+      <!-- Social login buttons -->
+      <div class="icon" style="display: flex; padding: 10px;">
+       
+        <!-- Facebook Icon -->
+        <i class="fab fa-facebook-f" style="font-size: 40px;color:#4267B2;padding: 5px;margin-left: 40px;margin-top: 20px; border-radius: 100px; background-color: #fff; border: 1px solid #ccc; text-align: center;"></i>
+        
+        <!-- Google Icon -->
+        <i class="fab fa-google" style="font-size: 40px;color:#DB4437;padding: 5px;margin-left: 40px;margin-top: 20px; border-radius: 100px; background-color: #fff; border: 1px solid #ccc; text-align: center;"></i>
+        
+        <!-- Instagram Icon -->
+        <i class="fab fa-instagram" style="font-size: 40px;color:#E1306C;padding: 5px;margin-left: 40px;margin-top: 20px; border-radius: 100px; background-color: #fff; border: 1px solid #ccc; text-align: center;"></i>
+        
+        <!-- X (Twitter) Icon -->
+        <i class="fab fa-twitter" style="font-size: 40px;color:#1DA1F2;padding: 5px;margin-left: 40px;margin-top: 20px; border-radius: 100px; background-color: #fff; border: 1px solid #ccc; text-align: center;"></i>
+    </div>
+
+      <!-- Form -->
+      <form id="loginForm" style="display:flex;flex-direction:column;gap:15px;">
+        <input type="email" id="Email" placeholder="Email" required 
+          style="padding:12px;border:1px solid #ccc;border-radius:8px;outline:none;font-size:14px;">
+        <input type="password" id="password" placeholder="Password" required 
+          style="padding:12px;border:1px solid #ccc;border-radius:8px;outline:none;font-size:14px;">
+        <button type="submit" id="loginBtn"
+          style="background:#1b1b1b;color:#fff;padding:12px;border:none;border-radius:8px;cursor:pointer;font-size:16px;">Login</button>
+      </form>
+
+      <!-- Terms -->
+      <p style="font-size:12px;color:#555;margin-top:10px;">
+        By continuing you agree to the 
+        <a href="#" style="color:#000;text-decoration:none;font-weight:500;">Terms of Service</a> and 
+        <a href="#" style="color:#000;text-decoration:none;font-weight:500;">Privacy Policy</a>.
+      </p>
+
+      <!-- Sign in link -->
+      <p style="font-size:12px;margin-top:10px;">
+        Already have an account? 
+        <a href="#" style="color:#000;text-decoration:none;font-weight:500;">Sign In</a>
+      </p>
+    </div>
+
+    <!-- Right Side (Image) -->
+    <div style="flex:1;background:url('./images/login img.jpg') no-repeat center/cover;"></div>
+  </div>
+
+  <script>
+    document.getElementById("loginForm").addEventListener("submit", function(e) {
+      e.preventDefault(); // stop refresh
+      
+      const email = document.getElementById("Email").value.trim();
+      const password = document.getElementById("password").value;
+      const btn = document.getElementById("loginBtn");
+
+      if (!email || !password) {
+        alert("Please enter Email and Password");
+        return;
+      }
+
+      // demo credentials
+      if (email === "pritha@gmail.com" && password === "admin123") {
+        sessionStorage.setItem("loggedIn", "true");
+        sessionStorage.setItem("showLoginPopup", "true");
+
+        btn.disabled = true;
+        btn.textContent = "Signing in...";
+
+        setTimeout(() => {
+          window.location.href = "home.html";
+        }, 700);
+      } else {
+        alert("Invalid credentials ❌");
+      }
+    });
+  </script>
+</body>
+</html>
